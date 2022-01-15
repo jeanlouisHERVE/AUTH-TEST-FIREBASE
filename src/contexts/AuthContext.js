@@ -28,8 +28,9 @@ export function AuthProvider({ children }) {
         signup
     }
     return (
+
         <AuthContext.Provider value={value}>
-            {children}
+            {!loading && children}
         </AuthContext.Provider>
     )
 }
